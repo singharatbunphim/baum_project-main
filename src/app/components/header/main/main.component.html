@@ -1,0 +1,80 @@
+<div class="header container-fuid fixed  md:fixed bg-white w-full h-auto z-10 top-0 shadow" id="header">
+    <div class="container py-2 md:py-6 lg:py-10 mx-auto">
+      <div *ngIf="openMenu">
+        <div class="absolute bg-gradient-to-b from-hamburger-shadow to-hamburger-shadow-1 z-20 h-auto w-full top-0 left-0 py-10 px-5">
+          <div class="absolute top-4 right-4">
+            <span (click)="HandleClick()"><i class="pi pi-times-circle text-red-custom"></i></span>
+          </div>
+          <ul class="flex-row mb-0 md:flex text-white z-30">
+            <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a class="uppercase cursor-pointer text-xs tracking-wider" 
+              [routerLink]="['/about']" routerLinkActive="LinkActive" >About US</a>
+            </li>
+            <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a  class="uppercase cursor-pointer text-xs text-gray-400 tracking-wider"
+              [routerLink]="['/training']" routerLinkActive="LinkActive">Training</a>
+            </li>
+            <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a  class="uppercase cursor-pointer text-xs  text-gray-400 tracking-wider"
+              [routerLink]="['/services']" routerLinkActive="LinkActive">Services</a>
+            </li>
+            <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+              [routerLink]="['/project']" routerLinkActive="LinkActive">PROJECTS</a>
+            </li>
+            <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+              [routerLink]="['/blog']" routerLinkActive="LinkActive">BLOG</a>
+            </li>
+            <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom" (click)="HandleClick()">
+              <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+              [routerLink]="['/publications']" routerLinkActive="LinkActive">PUBLICATIONS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="md:flex h-auto relative w-full md:max-w-7xl mx-auto flex justify-center items-center" id="menu">
+          <div class="justify-center items-center px-5">
+              <ul class="flex-row mb-0 hidden  md:flex">
+                <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom">
+                  <a class="uppercase cursor-pointer text-xs tracking-wider" 
+                  [routerLink]="['/about']" routerLinkActive="LinkActive" >About US</a>
+                </li>
+                <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom">
+                  <a  class="uppercase cursor-pointer text-xs text-gray-400 tracking-wider"
+                  [routerLink]="['/training']" routerLinkActive="LinkActive">Training</a>
+                </li>
+                <li class="sm:mx-1 md:mx-0 lg:mx-4 p-2 navLink hover:text-blue-custom">
+                  <a  class="uppercase cursor-pointer text-xs  text-gray-400 tracking-wider"
+                  [routerLink]="['/services']" routerLinkActive="LinkActive">Services</a>
+                </li>
+              </ul>
+          </div>
+          <div class="shrink-0">
+            <img src="../../../../assets/images/logo.png" class="w-full h-full cursor-pointer"
+            [routerLink]="['/home']" routerLinkActive="LinkActive">
+          </div>
+          <div class=" flex justify-start items-center px-5">
+            <ul class="flex-row mb-0 hidden  md:flex">
+              <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom">
+                <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+                [routerLink]="['/project']" routerLinkActive="LinkActive">PROJECTS</a>
+              </li>
+              <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom">
+                <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+                [routerLink]="['/blog']" routerLinkActive="LinkActive">BLOG</a>
+              </li>
+              <li class="sm:mx-1 md:mx-0 lg:mx-6 p-2 navLink hover:text-blue-custom">
+                <a class="uppercase text-xs md:text-md cursor-pointer tracking-wider text-gray-400"
+                [routerLink]="['/publications']" routerLinkActive="LinkActive">PUBLICATIONS</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:hidden absolute right-10">
+            <span (click)="HandleClick()"><i class="pi pi-bars text-green-custom" ></i></span>
+          </div>
+      </div>
+  </div>
+  </div>

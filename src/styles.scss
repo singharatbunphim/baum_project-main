@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/style/scss/color.scss';
+@import './assets/style/scss/fonts.scss';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    -webkit-user-select: none;
+    font-family: 'Poppins',sans-serif;
+    
+    * {
+      transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+    }
+  
+    a{
+      text-decoration: none !important;
+    }
+  
+    ol, ul {
+      padding: 0px !important;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    input,textarea {
+      font-family: 'Poppins';
+      border: 1;
+      outline: none;
+    }
+  
+  }
+  

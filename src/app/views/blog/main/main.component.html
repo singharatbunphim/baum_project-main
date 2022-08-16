@@ -1,0 +1,38 @@
+<div class="banner h-[40vh] md:h-[70vh] w-full bg-center  bg-cover object-fill md:object-cover  md:bg-cover bg-no-repeat"
+     style="background-image: url('../../../../assets/images/book.jpeg')">
+</div>
+
+<div class="container-fuid">
+    <div class="blog  p-5 mb-1 relative max-w-5xl mx-auto">
+        <h2 class="title pt-14 mb-6" style="  -webkit-text-stroke-width: 2px;">BLOG</h2>
+        <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"  [responsiveOptions]="responsiveOptions">
+            <ng-template pTemplate="header">
+            </ng-template>
+            <ng-template let-product pTemplate="item">
+                <div class="product-item">
+                    <div class="product-item-content">
+                        <div class="relative top-0 w-full h-32  flex justify-center items-center overflow-hidden">
+                            <div class="w-24 h-20 ">
+                                    <img src="{{product.image}}" class="w-20 h-20">
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="mb-1">{{product.name}}</h4>
+                            <h6 class="mt-0 mb-3">${{product.price}}</h6>
+                            <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                            <div class="car-buttons mt-5 w-full justify-around p-3">
+                                <p-button type="button" class="mx-2" styleClass="p-button p-button-rounded" icon="pi pi-search"></p-button>
+                                <p-button type="button" class="mx-2" styleClass="p-button-success p-button-rounded " icon="pi pi-star-fill"></p-button>
+                                <p-button type="button" class="mx-2" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</div>
+
+
+ <!-- Section  Slider  -->
+

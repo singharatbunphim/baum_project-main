@@ -1,0 +1,12 @@
+<div class="banner hidden"></div>
+<div class="container-fuid mt-12 md:mt-32 mb-10">
+    <div class="publications  p-5 relative max-w-3xl mx-auto">
+        <h2 class="title pt-14 mb-6" style="  -webkit-text-stroke-width: 2px;">PUBLICATIONS</h2>
+        <div class="grid grid-cols-1 grid-rows-1 gap-10 h-auto mb-10">
+            <app-carditem-public *ngFor="let item of data; let i = index" [data]="item"></app-carditem-public>
+        </div>
+        <div class="py-10 flex justify-center">
+            <button class="uppercase text-white bg-green-custom px-14 py-2 rounded-xl text-xs">load more</button>
+        </div>
+    </div>
+</div>

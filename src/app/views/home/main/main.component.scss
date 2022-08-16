@@ -1,0 +1,44 @@
+@import '../../../../assets/style/scss/color.scss';
+.home {
+    span {
+        color: white;
+        -webkit-text-stroke-width: 7px;
+        text-shadow: 1px 5px 10px rgba($color: #000000, $alpha: 0.7);
+        line-height: 4rem;
+        letter-spacing: 0.25rem;
+
+        @media screen and (max-width: 760px){
+            -webkit-text-stroke-width: 2px;
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+
+
+}
+
+.home-content {
+    
+    .title {
+        color: $green-custom; 
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+        font-weight: bold; 
+
+        @media screen and (max-width: 760px){
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    .description {
+        line-height: 1.6rem;
+        font-weight: 400;
+    }
+
+    
+
+
+
+
+}

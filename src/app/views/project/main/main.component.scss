@@ -1,0 +1,24 @@
+@import '../../../../assets/style/scss/color.scss';
+
+
+
+.project {
+    
+    .title {
+        color: $green-custom; 
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+        font-weight: bold; 
+
+        @media screen and (max-width: 760px){
+            line-height: 2rem;
+            font-size: 1.4rem;
+        }
+    }
+
+    
+
+
+
+
+}

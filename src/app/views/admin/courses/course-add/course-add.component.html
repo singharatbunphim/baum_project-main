@@ -1,0 +1,62 @@
+<div class="max-w-8xl bg-white shadow-2xl my-5 ">
+      <div class="w-full h-auto p-10">
+        <h5 class="text-3xl text-blue-custom font-bold mb-3">Add Course</h5>
+        <div class="mt-10 sm:mt-0">
+            <div class="md:grid md:grid-cols-1 md:gap-6">
+                <div class="md:col-1">
+                    <div class="px-4 sm:px-0">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900">You can edit course here!</h3>
+                        <p class="mt-1 text-sm text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, animi.</p>
+                    </div>
+                </div>
+
+
+                <div class="grid grid-cols-1">
+                    <div class="grid grid-cols-3 gap-5 mb-3">
+                        <div>
+                          <h5 class="my-3">Name</h5>
+                          <input type="text" class="w-full border-2  rounded-lg h-10 focus:ring">
+                        </div>
+                        <div>
+                          <h5 class="my-3"> Caption</h5>
+                          <input type="text" class="w-full border-2  rounded-lg h-10 focus:ring">
+                        </div>
+                        <div>
+                          <h5 class="my-3">Details</h5>
+                          <input type="text" class="w-full border-2  rounded-lg h-10 focus:ring">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-5 mb-3">
+                      <div>
+                        <h5 class="my-3">Expression</h5>
+                        <div>
+                          <p-editor  [style]="{'height':'320px'}"></p-editor>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-5 mb-3">
+                        <div>
+                            <h5>Upload Images</h5>
+                            <img *Ngfor="let url of urls" src="url[0]" alt="">
+                            <input type="file" (change) = " SelectedFiles($event)" multiple>
+                        </div>
+                    </div>
+
+                <div >
+                  <h5>Metarial</h5>
+                  <p-listbox [options]="metarial" [(ngModel)]="selectedMetarial" [checkbox]="true"  [filter]="true" [multiple]="true" optionLabel="name" [style]="{'width':'100%'}"></p-listbox>
+                </div>
+
+
+
+                        
+        </div>
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <a class="bg-blue-custom inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Save</a>
+                </div>
+      </div>
+
+</div>
+

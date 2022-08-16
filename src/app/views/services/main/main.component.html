@@ -1,0 +1,14 @@
+<div class="banner h-[40vh] md:h-[70vh] w-full bg-center  bg-cover object-fill md:object-cover  md:bg-cover bg-no-repeat"
+     style="background-image: url('../../../../assets/images/Orange-business-services-8-21-5.png')">
+</div>
+
+
+
+<div class="container-fuid">
+    <div class="services  p-5 relative max-w-3xl mx-auto">
+        <h2 class="title pt-14 mb-6" style="  -webkit-text-stroke-width: 2px;">OUR SERVICES</h2>
+        <div class="grid grid-cols-1 grid-rows-1 gap-10 h-auto mb-10">
+            <app-carditem-blog *ngFor="let item of blogsData; let i = index;" [data]="item" ></app-carditem-blog> 
+        </div>
+    </div>
+</div>

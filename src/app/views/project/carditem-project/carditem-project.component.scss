@@ -1,0 +1,19 @@
+.card-item-project{
+    .card-header {
+
+    }
+
+    .card-body{
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .card-footer{
+        span {
+            -webkit-text-stroke-width: 1px;
+            letter-spacing: 1.25px;
+        }
+    }
+}

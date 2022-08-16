@@ -1,0 +1,20 @@
+@import '../../../../assets/style/scss/color.scss';
+
+.navLink {
+    a {
+        font-weight: 300;
+
+        @media screen and (min-width:960px) {
+            font-size: 14px;
+        }
+
+        @media (min-width: 870px) and (max-width: 960px) {
+            font-size: 12px;
+        }
+    }
+
+    
+    .LinkActive {
+        color: $green-custom;
+    }
+}

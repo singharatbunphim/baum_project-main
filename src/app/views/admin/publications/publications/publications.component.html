@@ -1,0 +1,55 @@
+
+<div class="max-w-8xl bg-white shadow-2xl my-5 ">
+
+    <div class="w-full h-auto p-10">
+        <h2 class="text-3xl  font-bold text-blue-custom">Publication</h2>
+        <div class="w-full flex justify-end">
+            <div class="flex">
+                <button  type="button" class="bg-green-custom px-5 py-2 text-white rounded-md">
+                    <i class="pi pi-plus mx-1"></i>
+                    Publication
+                </button>
+            </div>
+
+        </div>
+        <div class="w-full flex flex-col mt-3">
+
+            <p-table [value]="publications" [paginator]="true" [rows]="rows"  [(first)]="first" [showCurrentPageReport]="true"
+            responsiveLayout="scroll" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th class="text-center" pSortableColumn="owner">Owner<p-sortIcon field="courseId"></p-sortIcon></th>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Image</th>
+                        <th class="text-center">Caption</th>
+                        <th class="text-center">Details</th>
+                        <th class="text-center">created_date</th>
+                        <th class="text-center">Manage</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-publication>
+                    <tr>
+                        <td>{{publication.owner}}</td>
+                        <td>{{publication.title}}</td>
+                        <td>{{publication.image}}</td>
+                        <td>{{publication.caption}}</td>
+                        <td>{{publication.details}}</td>
+                        <td>{{publication.created_date}}</td>
+                        <td class="bg-green-custome">
+                            <a routerLink="view"><button type="button" class="bg-yellow-300 p-3 mx-1"><i class="pi pi-eye mx-1"></i>View</button></a>
+                            <a routerLink="edit"><button type="button" class="bg-green-custom text-white p-3 mx-1"><i class="pi pi-pencil mx-1"></i>Edit</button></a>
+                            <a routerLink="delete"><button type="button" class="bg-red-custom text-white p-3 mx-1"><i class="pi pi-trash mx-1"></i>Delete</button></a>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+
+
+
+            
+        </div>
+    </div>
+</div>
+
+
